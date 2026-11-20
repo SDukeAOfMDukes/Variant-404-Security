@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+node_modules/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+runtime_data/
+test_runtime*/
+*.sqlite3
+*.db
+exports/
+.DS_Store

@@ -1,0 +1,20 @@
+services:
+  variant404:
+    build: .
+    ports:
+      - "10000:10000"
+    environment:
+      ENVIRONMENT: production
+      DATA_DIR: /var/data
+      APP_SECRET: ${APP_SECRET:?Set APP_SECRET in your .env file}
+      INITIAL_ADMIN_EMAIL: ${INITIAL_ADMIN_EMAIL:?Set INITIAL_ADMIN_EMAIL in your .env file}
+      INITIAL_ADMIN_NAME: ${INITIAL_ADMIN_NAME:-Workspace Administrator}
+      INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD:?Set INITIAL_ADMIN_PASSWORD in your .env file}
+      INGEST_SECRET: ${INGEST_SECRET:?Set INGEST_SECRET in your .env file}
+      COOKIE_SECURE: "false"
+      CORS_ORIGINS: ""
+    volumes:
+      - variant404-data:/var/data
+    restart: unless-stopped
+volumes:
+  variant404-data:

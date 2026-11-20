@@ -1,0 +1,9 @@
+.git
+.gitignore
+**/__pycache__
+**/*.pyc
+**/node_modules
+frontend/dist
+runtime_data
+test_runtime*
+.env

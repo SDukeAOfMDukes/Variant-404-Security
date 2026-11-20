@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: variant404-security-assurance
+    runtime: docker
+    plan: 0.5c-512mb
+    healthCheckPath: /api/health
+    numInstances: 1
+    disk:
+      name: variant404-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: CORS_ORIGINS
+        value: ""
+      - key: APP_SECRET
+        generateValue: true
+      - key: INITIAL_ADMIN_EMAIL
+        sync: false
+      - key: INITIAL_ADMIN_NAME
+        sync: false
+      - key: INITIAL_ADMIN_PASSWORD
+        sync: false
+      - key: INGEST_SECRET
+        sync: false
