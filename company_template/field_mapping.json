@@ -1,0 +1,12 @@
+{
+  "timestamp": "event_time",
+  "event_id": "event_id",
+  "system": "source_system",
+  "actor": "principal",
+  "action": "operation",
+  "object_id": "target_id",
+  "source_ip": "src_ip",
+  "result": "outcome",
+  "approval_ref": "approval_id",
+  "request_id": "correlation_id"
+}

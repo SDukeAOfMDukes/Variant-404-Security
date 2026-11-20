@@ -1,0 +1,4 @@
+event_time,event_id,source_system,principal,operation,target_id,src_ip,outcome,approval_id,correlation_id
+2026-11-19T09:00:00+05:30,evt-demo-001,ERP,finance.operator,vendor.bank_change,VENDOR-100,192.0.2.10,success,APR-2041,REQ-6001
+2026-11-19T09:02:00+05:30,evt-demo-002,ERP,integration.service,vendor.bank_change,VENDOR-101,192.0.2.99,success,,REQ-6002
+2026-11-19T09:05:00+05:30,evt-demo-003,SSO,hr.admin,employee.terminated,EMP-300,192.0.2.12,success,HR-EXIT-301,REQ-6003
